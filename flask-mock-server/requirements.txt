@@ -1,3 +1,7 @@
 Flask==3.0.0
 faker
 flasgger
+Flask-SQLAlchemy
+psycopg2-binary
+dlt
+marshmallow

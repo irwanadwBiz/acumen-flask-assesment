@@ -1,7 +1,10 @@
-.PHONY: start dev data
+.PHONY: start dev data start-docker start-local
 
 start-docker:
-	docker run -p 5000:5000 flask-mock-server
+	docker-compose up -d --build
+
+start-local:
+	DATABASE_URL=postgresql://postgres:password@localhost:5433/customer_db venv/bin/python app.py
 
 start:
 	venv/bin/python app.py
