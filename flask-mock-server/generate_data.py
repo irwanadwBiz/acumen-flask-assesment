@@ -8,7 +8,7 @@ fake = Faker()
 customers = []
 for i in range(1, 26):
     customer = {
-        "customer_id": i,
+        "customer_id": str(i),
         "first_name": f"{fake.first_name()}",
         "last_name": f"{fake.last_name()}",
         "email": f"{fake.email()}",
