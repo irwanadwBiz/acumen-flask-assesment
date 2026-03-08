@@ -8,3 +8,6 @@ class CustomerService:
     def get_customer_by_id(self, customer_id):
         customer = self.repository.get_by_id(customer_id)
         return customer
+        
+    def create_customer(self, customer_data):
+        return self.repository.add_customer(customer_data)
